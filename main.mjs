@@ -111,7 +111,7 @@ Sandbox.define('/InsuranceApplicationServices/jaxrs/application-track-entry/sear
               "zipCodeExtension": "456"
             }
           ],
-          "total": 2
+          "total": 0
         }
     );
 });
