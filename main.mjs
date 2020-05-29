@@ -189,6 +189,14 @@ Sandbox.define('/InsuranceApplicationServices/jaxrs/applications/policy-folder',
 Sandbox.define('/application-track-entry/{applnNum}', 'POST', function(req, res) {
     res.status(200);
     // Send the response body.
+     res.json(
+        
+        {
+          "folderId": 675,
+          "applicationNumber": 90087
+        }
+
+    );
 });
 
 Sandbox.define('/PolicyServices/jaxrs/policy-folder/document-types', 'GET', function(req, res) {
