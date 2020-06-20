@@ -199,6 +199,19 @@ Sandbox.define('/application-track-entry/{applnNum}', 'POST', function(req, res)
     );
 });
 
+Sandbox.define('/recordprintdisposition', 'POST', function(req, res) {
+    res.status(200);
+    // Send the response body.
+     res.json(
+        
+        {
+          "Message": "Updated successfully"
+        }
+
+    );
+});
+
+
 Sandbox.define('/PolicyServices/jaxrs/policy-folder/document-types', 'GET', function(req, res) {
 
 
