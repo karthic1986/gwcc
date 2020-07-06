@@ -73,6 +73,14 @@ Sandbox.define('/PolicyServices/jaxrs/policy-folder/document-types', 'GET', func
         "requiredForEndorsement": false,
         "requiredForRenewal": false
       }
+      ,
+       {
+        "docTypeId": 5,
+        "description": "Driver License Copy",
+        "requiredForApplication": false,
+        "requiredForEndorsement": false,
+        "requiredForRenewal": false
+      }
     ]
 
 
