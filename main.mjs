@@ -46,6 +46,33 @@ Sandbox.define('/AgentServices/jaxrs/v1/agent-data', 'GET', function(req, res) {
 });
 
 
+Sandbox.define('/PolicyServices/jaxrs/policy-folder/document-types', 'GET', function(req, res) {
+
+    res.status(200);
+
+    res.json(
+    [
+      {
+        "docTypeId": 1,
+        "description": "Policy Application",
+        "requiredForApplication": true,
+        "requiredForEndorsement": false,
+        "requiredForRenewal": false
+      },
+      {
+        "docTypeId": 4,
+        "description": "General Correspondence",
+        "requiredForApplication": false,
+        "requiredForEndorsement": false,
+        "requiredForRenewal": false
+      }
+    ]
+
+
+    );
+});
+
+
 
 
 
