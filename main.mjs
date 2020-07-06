@@ -65,6 +65,13 @@ Sandbox.define('/PolicyServices/jaxrs/policy-folder/document-types', 'GET', func
         "requiredForApplication": false,
         "requiredForEndorsement": false,
         "requiredForRenewal": false
+      },
+       {
+        "docTypeId": 5,
+        "description": "Truck Bill Copy",
+        "requiredForApplication": false,
+        "requiredForEndorsement": false,
+        "requiredForRenewal": false
       }
     ]
 
