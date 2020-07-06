@@ -46,6 +46,34 @@ Sandbox.define('/AgentServices/jaxrs/v1/agent-data', 'GET', function(req, res) {
 });
 
 
+Sandbox.define('/PolicyServices/jaxrs/policy-folder/document-types', 'GET', function(req, res) {
+
+    res.status(200);
+
+    res.json(
+    [
+      {
+        "docTypeId": 1,
+        "description": "Policy Application",
+        "requiredForApplication": true,
+        "requiredForEndorsement": false,
+        "requiredForRenewal": false
+      },
+      {
+        "docTypeId": 4,
+        "description": "General Correspondence",
+        "requiredForApplication": false,
+        "requiredForEndorsement": false,
+        "requiredForRenewal": false
+      }
+    ]
+
+
+    );
+});
+
+
+
 
 
 Sandbox.define('/InsuranceApplicationServices/jaxrs/application-track-entry/search', 'POST', function(req, res) {
@@ -211,22 +239,3 @@ Sandbox.define('/recordprintdisposition', 'POST', function(req, res) {
 });
 
 
-Sandbox.define('/PolicyServices/jaxrs/policy-folder/document-types', 'GET', function(req, res) {
-
-
-  
-    // Set the status code of the response.
-    res.status(200);
-
-    // Send the response body.
-    res.json(
-       {
-        "docTypeId": 4,
-        "description": "General Correspondence",
-        "requiredForApplication": false,
-        "requiredForEndorsement": false,
-        "requiredForRenewal": false
-      }
-
-    );
-});
