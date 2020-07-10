@@ -241,7 +241,7 @@ Sandbox.define('/application-track-entry/{applnNum}', 'POST', function(req, res)
     );
 });
 
-Sandbox.define('/recordprintdisposition', 'POST', function(req, res) {
+Sandbox.define('/CaseManagementServices/jaxrs/underwriting/{caseName}/print-result', 'POST', function(req, res) {
     res.status(200);
     // Send the response body.
      res.json(
