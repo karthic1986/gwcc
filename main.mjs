@@ -160,7 +160,7 @@ Sandbox.define('/InsuranceApplicationServices/jaxrs/application-track-entry/sear
 
 
 
-Sandbox.define('/PolicyServices/jaxrs/policy/base-details', 'GET', function(req, res) {
+Sandbox.define('/PolicyServices/jaxrs/policy/{policyNumber}/base-details', 'GET', function(req, res) {
 
 
   
