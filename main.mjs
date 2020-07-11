@@ -46,7 +46,7 @@ Sandbox.define('/AgentServices/jaxrs/v1/agent-data', 'GET', function(req, res) {
 });
 
 
-Sandbox.define('/PolicyServices/jaxrs/policy-folder/document-types/filterType={filterType}', 'GET', function(req, res) {
+Sandbox.define('/PolicyServices/jaxrs/policy-folder/document-types', 'GET', function(req, res) {
 
     res.status(200);
 
