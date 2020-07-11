@@ -2,7 +2,7 @@
  * My API Sandbox
  * 
  */
-Sandbox.define('/AgentServices/jaxrs/v1/agent-data?agentNumber={agentNumber}&coCode={coCode}', 'GET', function(req, res) {
+Sandbox.define('AgentServices/jaxrs/v1/agent-data', 'GET', function(req, res) {
 
     res.status(200);
 
