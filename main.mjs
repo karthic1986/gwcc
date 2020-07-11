@@ -1,13 +1,12 @@
-/**
- * My API Sandbox
- * 
- */
-Sandbox.define('AgentServices/jaxrs/v1/agent-data', 'GET', function(req, res) {
+
+
+
+Sandbox.define('/AgentServices/jaxrs/v1/agent-data', 'GET', function(req, res) {
 
     res.status(200);
 
     res.json(
-        {
+       {
           "apAgentDTO": {
             "agentNum": 10234016,
             "agentCoCode": 102,
@@ -42,8 +41,10 @@ Sandbox.define('AgentServices/jaxrs/v1/agent-data', 'GET', function(req, res) {
           ]
         }
 
+
     );
 });
+
 
 
 Sandbox.define('/PolicyServices/jaxrs/policy-folder/document-types', 'GET', function(req, res) {
