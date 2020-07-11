@@ -233,6 +233,9 @@ Sandbox.define('/InsuranceApplicationServices/jaxrs/application-track-entry/{app
     res.status(200);
     // Send the response body.
      res.json(
+           {
+          "Message": "Updated successfully"
+        }
     );
 });
 
