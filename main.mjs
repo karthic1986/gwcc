@@ -92,7 +92,7 @@ Sandbox.define('/PolicyServices/jaxrs/policy-folder/document-types', 'GET', func
 
 
 
-Sandbox.define('/InsuranceApplicationServices/jaxrs/application-track-entry/search1', 'POST', function(req, res) {
+Sandbox.define('/InsuranceApplicationServices/jaxrs/application-track-entry/search', 'POST', function(req, res) {
 
     // Check the request, make sure it is a compatible type
     if(req.body.agencyNumbe<0)
