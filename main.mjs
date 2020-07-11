@@ -215,7 +215,7 @@ Sandbox.define('/PolicyServices/jaxrs/policy/{policyNumber}/base-details', 'GET'
     );
 });
 
-Sandbox.define('/PolicyServices/jaxrs/policy-folder/new-app', 'POST', function(req, res) {
+Sandbox.define('/PolicyServices/jaxrs/policy-folder/new-app?api_key=folder', 'POST', function(req, res) {
     res.status(200);
     // Send the response body.
     res.json(
