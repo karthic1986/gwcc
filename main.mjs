@@ -229,7 +229,7 @@ Sandbox.define('/PolicyServices/jaxrs/policy-folder/new-app', 'POST', function(r
     );
 });
 
-Sandbox.define('/InsuranceApplicationServices/jaxrs/application-track-entry/3668107', 'POST', function(req, res) {
+Sandbox.define('/InsuranceApplicationServices/jaxrs/application-track-entry/{applnNum}', 'POST', function(req, res) {
     res.status(200);
     // Send the response body.
      res.json(
