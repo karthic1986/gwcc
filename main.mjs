@@ -92,72 +92,6 @@ Sandbox.define('/PolicyServices/jaxrs/policy-folder/document-types', 'GET', func
 
 
 
-Sandbox.define('/InsuranceApplicationServices/jaxrs/application-track-entry/search', 'POST', function(req, res) {
-
-    // Check the request, make sure it is a compatible type
-    if(req.body.agencyNumbe<0)
-    {
-        return res.send(400, 'Invalid agencyNumber, expected agencyNumber');
-    }
-
-    // Set the type of response, sets the content type.
-    res.type('application/json');
-
-    // Set the status code of the response.
-    res.status(200);
-
-    // Send the response body.
-    res.json(
-        
-        {
-          "records": [
-            {
-              "applicationNumber": "127895",
-              "applicationStatus": "live",
-              "opid": "32423",
-              "agent": "James",
-              "effectiveDate": "14-05-2020",
-              "insuredName": "ABC Truck",
-              "city": "Madison",
-              "underwriter": "Smith",
-              "region": "NY",
-              "applicationCoverages": [],
-              "finalCodes": [],
-              "comments": [],
-              "finalDate": "14-05-2020",
-              "finalTime": "12:45:00 PM",
-              "email": "Smith@abc.com",
-              "businessPhone": "+1 324-356-365",
-              "cellPhone": "234 234 234",
-              "zipCode": "53558",
-              "zipCodeExtension": "456"
-            },
-              {
-               "applicationNumber": "12789",
-              "applicationStatus": "live",
-              "opid": "32423",
-              "agent": "Robert",
-              "effectiveDate": "14-05-2020",
-              "insuredName": "ABC Truck",
-              "city": "Madison",
-              "underwriter": "Smith",
-              "region": "NY",
-              "applicationCoverages": [],
-              "finalCodes": [],
-              "comments": [],
-              "finalDate": "14-05-2020",
-              "finalTime": "12:45:00 PM",
-              "email": "Smith@abc.com",
-              "businessPhone": "+1 324-356-365",
-              "cellPhone": "234 234 234",
-              "zipCode": "53558",
-              "zipCodeExtension": "456"
-            }
-          ],
-          "total": 2
-        }
-    );
-});
 
 
 
@@ -232,11 +166,68 @@ Sandbox.define('/PolicyServices/jaxrs/policy-folder/new-app', 'POST', function(r
 Sandbox.define('/InsuranceApplicationServices/jaxrs/application-track-entry/{applnNum}', 'POST', function(req, res) {
     res.status(200);
     // Send the response body.
-     res.json(
-           {
-          "Message": "Updated successfully"
+    
+    if(req.params.applnNum!='search')
+    {
+         res.json(
+               {
+            "Message": "Updated successfully"
+            }
+        );
+    }
+    else
+    {
+            res.json(
+        
+        {
+          "records": [
+            {
+              "applicationNumber": "127895",
+              "applicationStatus": "live",
+              "opid": "32423",
+              "agent": "James",
+              "effectiveDate": "14-05-2020",
+              "insuredName": "ABC Truck",
+              "city": "Madison",
+              "underwriter": "Smith",
+              "region": "NY",
+              "applicationCoverages": [],
+              "finalCodes": [],
+              "comments": [],
+              "finalDate": "14-05-2020",
+              "finalTime": "12:45:00 PM",
+              "email": "Smith@abc.com",
+              "businessPhone": "+1 324-356-365",
+              "cellPhone": "234 234 234",
+              "zipCode": "53558",
+              "zipCodeExtension": "456"
+            },
+              {
+               "applicationNumber": "12789",
+              "applicationStatus": "live",
+              "opid": "32423",
+              "agent": "Robert",
+              "effectiveDate": "14-05-2020",
+              "insuredName": "ABC Truck",
+              "city": "Madison",
+              "underwriter": "Smith",
+              "region": "NY",
+              "applicationCoverages": [],
+              "finalCodes": [],
+              "comments": [],
+              "finalDate": "14-05-2020",
+              "finalTime": "12:45:00 PM",
+              "email": "Smith@abc.com",
+              "businessPhone": "+1 324-356-365",
+              "cellPhone": "234 234 234",
+              "zipCode": "53558",
+              "zipCodeExtension": "456"
+            }
+          ],
+          "total": 2
         }
     );
+    }
 });
 
 Sandbox.define('/CaseManagementServices/jaxrs/underwriting/{caseName}/print-result', 'POST', function(req, res) {
