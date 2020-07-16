@@ -256,7 +256,7 @@ Sandbox.define('/CaseManagementServices/jaxrs/underwriting', 'POST', function(re
 
 
 Sandbox.define('/PolicyServices/jaxrs/tables/ps-plcy-num-log/app-number', 'POST', function(req, res) {
-    res.status(202);
+    res.status(204);
     // Send the response body.
      res.json(
         
