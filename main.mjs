@@ -231,7 +231,7 @@ Sandbox.define('/InsuranceApplicationServices/jaxrs/application-track-entry/{app
 });
 
 Sandbox.define('/CaseManagementServices/jaxrs/underwriting/{caseName}/print-result', 'POST', function(req, res) {
-    res.status(200);
+    res.status(204);
     // Send the response body.
      res.json(
         
