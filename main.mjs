@@ -243,7 +243,7 @@ Sandbox.define('/CaseManagementServices/jaxrs/underwriting/{caseName}/print-resu
 });
 
 Sandbox.define('/CaseManagementServices/jaxrs/underwriting', 'POST', function(req, res) {
-    res.status(200);
+    res.status(201);
     // Send the response body.
      res.json(
         
